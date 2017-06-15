@@ -1,4 +1,4 @@
-const critics = require('../seed-data/critic');
+const critics = require('../seed-data/critics');
 
 exports.seed = function(knex, Promise) {
   return knex.raw('TRUNCATE critic RESTART IDENTITY CASCADE;')
