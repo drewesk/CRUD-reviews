@@ -20,4 +20,6 @@ exports.up = function(knex, Promise) {
 exports.down = function(knex, Promise) {
   return knex.schema.dropTable('review');
 };
+
+// Solution from CJ,
 // table.integer('table_name_id').unsigned().references('id').inTable('table_name').onDelete('cascade');
