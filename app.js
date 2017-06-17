@@ -7,8 +7,6 @@ const bodyParser = require('body-parser');
 
 const app = express();
 
-// const critics = require('./api/critics');
-// const restaurants = require('./api/restaurants');
 const reviews = require('./api/reviews');
 
 // uncomment after placing your favicon in /public
@@ -18,9 +16,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 
-// app.use('api/v1/critics', critics);
-// app.use('api/v1/restaurants', restaurants);
-app.use('/api/v1/reviews', reviews);
+app.use('/api/v1/critics', reviews);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

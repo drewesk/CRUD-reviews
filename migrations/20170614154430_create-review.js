@@ -1,6 +1,6 @@
 exports.up = function(knex, Promise) {
   return knex.schema.createTable('review', (table) => {
-    table.increments();
+    table.increments('id').primary();
     table.text('title');
     table.text('body');
     table.integer('rating');
@@ -20,6 +20,3 @@ exports.up = function(knex, Promise) {
 exports.down = function(knex, Promise) {
   return knex.schema.dropTable('review');
 };
-
-// Solution from CJ,
-// table.integer('table_name_id').unsigned().references('id').inTable('table_name').onDelete('cascade');
