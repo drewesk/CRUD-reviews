@@ -1,8 +1,0 @@
-LOG:  database system was shut down at 2017-06-16 23:17:19 MDT
-LOG:  MultiXact member wraparound protections are now enabled
-LOG:  autovacuum launcher started
-LOG:  database system is ready to accept connections
-ERROR:  column critic.user_id does not exist at character 47
-STATEMENT:  select * from "review" inner join "critic" on "critic"."user_id" = "user"."id" where "user"."id" = $1
-ERROR:  table name "critic" specified more than once
-STATEMENT:  select * from "review" inner join "critic" on "review"."critic_id" = "critic"."id" inner join "critic" on "review"."restaurant_id" = "critic"."id" where "critic"."id" = $1 and "critic"."id" = $2
