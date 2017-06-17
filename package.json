@@ -1,11 +1,11 @@
 {
-  "name": "crud-gReviews",
+  "name": "crud-reviews",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
     "dev": "nodemon",
-    "test": "(dropdb --if-exists test-gReviews && createdb test-gReviews) && NODE_ENV=test mocha"
+    "test": "(dropdb --if-exists test-gReviews && createdb test-crud-reviews) && NODE_ENV=test mocha"
   },
   "dependencies": {
     "body-parser": "~1.17.1",
